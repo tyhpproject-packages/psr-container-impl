@@ -1,0 +1,41 @@
+{
+    "name": "tyhpdef/psr-container-impl",
+    "description": "Implementation package for tyhpdef/psr-container. Require tyhpdef/psr-container, not this package.",
+    "keywords": [
+        "dev",
+        "static analysis",
+        "internal"
+    ],
+    "type": "library",
+    "license": "Apache-2.0",
+    "version": "2.0.2.0",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "extra": {
+        "tyhp": {
+            "interopContractVersion": 1,
+            "php-version": ">=8.2",
+            "require": {
+                "tyhpdef/php": "@dev"
+            },
+            "package": {
+                "include": [
+                    "./_tyhpdef/*.tyhpdef",
+                    "./_tyhpdef/extensions/*.tyhpdef"
+                ],
+                "overlay": [
+                    "./_tyhpdef/overlays/stubs/*.tyhpdef",
+                    "./_tyhpdef/overlays/*.tyhpdef"
+                ]
+            },
+            "public": "tyhpdef/psr-container"
+        }
+    },
+    "require": {
+        "php": ">=8.2",
+        "psr/container": "2.0.2"
+    },
+    "require-dev": {
+        "tyhpdef/php": "@dev"
+    }
+}
